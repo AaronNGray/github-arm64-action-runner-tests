@@ -31,7 +31,7 @@ jobs:
           lsb_release -a
           lscpu
         
-  Ubuntu-x64-gpu:
+  Ubuntu-x64-GPU:
     runs-on:
       [self-hosted, linux, x64, gpu]
     steps:
@@ -52,7 +52,7 @@ jobs:
           ver
           wmic cpu get name
 
-  Windows-ARM64-gpu:
+  Windows-ARM64-GPU:
     runs-on:
       [windows-latest, ARM64, gpu]
       
@@ -74,7 +74,7 @@ jobs:
           ver
           wmic cpu get name
 
-  Windows-x64-gpu:
+  Windows-x64-GPU:
     runs-on:
       [windows-latest, x64, gpu]
       
