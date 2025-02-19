@@ -11,6 +11,16 @@ jobs:
           lsb_release -a
           lscpu
 
+  Ubuntu-ARM64-GPU:
+    runs-on:
+      [ubuntu-latest, ARM64, gpu]
+    steps:
+      - name: ubuntu-latest-arm64-gpu
+        run: 
+          echo "ubuntu-latest arm64"
+          lsb_release -a
+          lscpu
+
   Ubuntu-x64:
     runs-on:
       [self-hosted, linux, x64]
