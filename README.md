@@ -1,3 +1,3 @@
-[![github-test-runner-tests](https://github.com/AaronNGray/arm64-github-actions/actions/workflows/github-test-runner-actions.yml/badge.svg)](https://github.com/AaronNGray/arm64-github-actions/actions/workflows/github-test-runner-actions.yml)
-# github-test-runner-actions
-GitHub Test Runner Actions
+[![.github/workflows/github-action-runner-tests.yml](https://github.com/AaronNGray/github-test-runner-actions/actions/workflows/github-action-runner-tests.yml/badge.svg)](https://github.com/AaronNGray/github-test-runner-actions/actions/workflows/github-action-runner-tests.yml)
+# github-action-runner-tests
+GitHub Action Runner Tests
