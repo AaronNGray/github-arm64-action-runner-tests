@@ -5,92 +5,102 @@ jobs:
     runs-on: [ubuntu-latest, ARM64]
     steps:
       - name: ubuntu-latest-arm64
-        run: |
-          echo "ubuntu-latest arm64"
-          lsb_release -a
-          lscpu
+        run: echo "ubuntu-latest arm64"
+      - name: lsb_release -a
+        run: lsb_release -a
+      - name: lscpu
+        run: lscpu
 
   Ubuntu-ARM64-GPU:
     runs-on: [ubuntu-latest, ARM64, gpu]
     steps:
       - name: ubuntu-latest-arm64-gpu
-        run: |
-          echo "ubuntu-latest arm64"
-          lsb_release -a
-          lscpu
+        run: echo "ubuntu-latest arm64"
+      - name: lsb_release -a
+        run: lsb_release -a
+      - name: lscpu
+        run: lscpu
 
   Ubuntu-x64:
     runs-on: [self-hosted, linux, x64]
     steps:
       - name: ubuntu-latest-arm64
-        run: |
-          echo "ubuntu-latest arm64"
-          lsb_release -a
-          lscpu
+        run: echo "ubuntu-latest arm64"
+      - name: lsb_release -a
+        run: lsb_release -a
+      - name: lscpu
+        run: lscpu
         
   Ubuntu-x64-GPU:
     runs-on: [self-hosted, linux, x64, gpu]
     steps:
       - name: ubuntu-latest-arm64-gpu
-        run: |
-          echo "ubuntu-latest arm64 gpu"
-          lsb_release -a
-          lscpu
+        run: echo "ubuntu-latest arm64 gpu"
+      - name: lsb_release -a
+        run: lsb_release -a
+      - name: lscpu
+        run: lscpu
         
   Windows-ARM64:
     runs-on: [windows-latest, ARM64]
     steps:
       - name: windows-latest-arm64
-        run: |
-          echo "windows-latest arm64"
-          ver
-          wmic cpu get name
+        run: echo "windows-latest arm64"
+      - name: ver
+        run: ver
+      - name: wmic cpu get name
+        run: wmic cpu get name
 
   Windows-ARM64-GPU:
     runs-on: [windows-latest, ARM64, gpu]
     steps:
       - name: windows-latest-arm64-gpu
-        run: |
-          echo "windows ARM64 GPU"
-          ver
-          wmic cpu get name
+        run: echo "windows ARM64 GPU"
+      - name: ver
+        run: ver
+      - name: wmic cpu get name
+        run: wmic cpu get name
 
   Windows-x64:
     runs-on: [windows-latest, x64]
     steps:
       - name: windows-latest-x64
-        run: |
-          echo "windows"
-          ver
-          wmic cpu get name
+        run: echo "windows"
+      - name: ver
+        run: ver
+      - name: wmic cpu get name
+        run: wmic cpu get name
 
   Windows-x64-GPU:
     runs-on: [windows-latest, x64, gpu]
     steps:
       - name: windows-latest-x64-gpu
-        run: |
-          echo "windows"
-          ver
-          wmic cpu get name
+        run: echo "windows x64 GPU"
+      - name: ver
+        run: ver
+      - name: wmic cpu get name
+        run: wmic cpu get name
 
   MacOS-ARM64:
     runs-on: [macos-latest, ARM64]
     steps:
       - name: macos-latest-arm64
-        run: |
-          echo "macos-latest"
-          sw_vers
-          sysctl -a | grep brand
-          sysctl -n hw.ncpu
+        run: echo "macos-latest"
+      - name: sw_vers
+        run: sw_vers
+      - name: sysctl -a | grep brand
+        run: sysctl -a | grep brand
+      - name: sysctl -n hw.ncpu
+        run: sysctl -n hw.ncpu
 
   MacOS-ARM64-GPU:
     runs-on: [macos-latest, ARM64, gpu]
     steps:
       - name: macos-latest-arm64-gpu
-        run: |
-          echo "macos-latest gpu"
-          sw_vers
-          sysctl -a | grep brand
-          sysctl -n hw.ncpu
-
-    
+        run: echo "macos-latest gpu"
+      - name: sw_vers
+        run: sw_vers
+      - name: sysctl -a | grep brand
+        run: sysctl -a | grep brand
+      - name: sysctl -n hw.ncpu
+        run: sysctl -n hw.ncpu
