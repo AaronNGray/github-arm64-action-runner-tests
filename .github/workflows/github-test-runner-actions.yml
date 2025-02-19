@@ -13,6 +13,16 @@ jobs:
 
   Ubuntu-x64:
     runs-on:
+      [self-hosted, linux, x64]
+    steps:
+      - name: ubuntu-latest-arm64
+        run: 
+          echo "ubuntu-latest arm64"
+          lsb_release -a
+          lscpu
+        
+  Ubuntu-x64-gpu:
+    runs-on:
       [self-hosted, linux, x64, gpu]
     steps:
       - name: ubuntu-latest-arm64-gpu
@@ -54,7 +64,7 @@ jobs:
           ver
           wmic cpu get name
 
-  Windows-x64:
+  Windows-x64-gpu:
     runs-on:
       [windows-latest, x64, gpu]
       
