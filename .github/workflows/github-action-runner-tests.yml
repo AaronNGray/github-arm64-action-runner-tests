@@ -29,8 +29,8 @@ jobs:
     steps:
       - name: windows-latest-arm64
         run: echo "windows-latest arm64"
-      - name: ver
-        run: ver
+      - name: systeminfo
+        run: systeminfo
       - name: wmic cpu get name
         run: wmic cpu get name
 
