@@ -2,7 +2,7 @@ name: github-action-runner-tests
 on: push
 jobs:
   Ubuntu-ARM64:
-    runs-on: [ubuntu-latest-arm64]
+    runs-on: [ubuntu-24.04-arm]
     steps:
       - name: ubuntu-latest-arm64
         run: echo "ubuntu-latest arm64"
@@ -12,7 +12,7 @@ jobs:
         run: lscpu
 
   Windows-ARM64:
-    runs-on: [windows-latest-arm64]
+    runs-on: [windows-latest-arm]
     steps:
       - name: windows-latest-arm64
         run: echo "windows-latest arm64"
