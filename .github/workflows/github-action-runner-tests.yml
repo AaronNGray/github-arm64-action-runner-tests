@@ -12,7 +12,20 @@ jobs:
         run: lscpu
 
   Windows-ARM64:
-    runs-on: [windows-latest-arm]
+    runs-on: windows-2025
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: 'x64'
+            plat: 'x64'
+            win_ver: 'Win64'
+          - arch: 'x86'
+            plat: 'Win32'
+            win_ver: 'Win32'
+          - arch: 'arm64'
+            plat: 'ARM64'
+            win_ver: 'WinARM64'    
     steps:
       - name: windows-latest-arm64
         run: echo "windows-latest arm64"
