@@ -31,8 +31,6 @@ jobs:
         run: echo "windows-latest arm64"
       - name: systeminfo
         run: systeminfo
-      - name: wmic cpu get name
-        run: wmic cpu get name
 
   MacOS-ARM64:
     runs-on: [macos-latest]
